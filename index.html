@@ -1,1 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+
+<title>
+🔥 TOPPER ZONE 🔥
+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:
+linear-gradient(
+135deg,
+#000000,
+#120000,
+#1a0000,
+#000000
+);
+
+font-family:
+'Poppins',
+sans-serif;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-200px;
+left:-200px;
+
+width:700px;
+height:700px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,80,0,0.25),
+transparent 70%
+);
+
+filter:blur(120px);
+
+animation:
+moveGlow 8s linear infinite alternate;
+
+z-index:-1;
+
+}
+
+/* MAIN */
+
+.container{
+
+width:92%;
+
+max-width:1100px;
+
+margin:auto;
+
+padding:60px 0;
+
+}
+
+/* TITLE */
+
+.title{
+
+text-align:center;
+
+font-size:65px;
+
+font-weight:900;
+
+margin-bottom:20px;
+
+background:
+linear-gradient(
+90deg,
+#ff3300,
+#ff8800,
+#ffaa00
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 30px rgba(255,80,0,0.4);
+
+}
+
+/* SUBTITLE */
+
+.sub{
+
+text-align:center;
+
+font-size:22px;
+
+margin-bottom:60px;
+
+color:#ffbb88;
+
+font-weight:700;
+
+}
+
+/* QUOTE BOX */
+
+.quote{
+
+background:
+rgba(255,255,255,0.04);
+
+border:
+1px solid rgba(255,120,0,0.15);
+
+padding:24px;
+
+border-radius:24px;
+
+margin-bottom:24px;
+
+font-size:22px;
+
+font-weight:600;
+
+line-height:1.8;
+
+box-shadow:
+0 0 20px rgba(255,80,0,0.08);
+
+transition:0.3s;
+
+}
+
+.quote:hover{
+
+transform:
+translateY(-6px);
+
+box-shadow:
+0 0 35px rgba(255,120,0,0.22);
+
+}
+
+/* ENGLISH */
+
+.eng{
+
+color:#ffaa66;
+
+font-weight:700;
+
+}
+
+/* TAMIL */
+
+.tamil{
+
+color:#ffffff;
+
+font-weight:600;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+text-align:center;
+
+margin-top:70px;
+
+font-size:20px;
+
+font-weight:700;
+
+background:
+linear-gradient(
+90deg,
+#ff3300,
+#ff8800,
+#ffaa00
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+/* ANIMATION */
+
+@keyframes moveGlow{
+
+0%{
+transform:
+translate(-50px,-50px);
+}
+
+100%{
+transform:
+translate(100px,100px);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+/* ACCESS CHECK */
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+const access =
+params.get("access");
+
+if(access != "true"){
+
+document.body.innerHTML =
+
+`
+<div style="
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+color:white;
+font-size:40px;
+font-family:Poppins,sans-serif;
+text-align:center;
+padding:20px;
+
+">
+
+❌ ACCESS DENIED
+
+</div>
+`;
+
+throw new Error(
+"ACCESS DENIED"
+);
+
+}
+
+</script>
+
+<div class="container">
+
+<h1 class="title">
+🔥 TOPPER ZONE 🔥
+</h1>
+
+<p class="sub">
+DISCIPLINE + CONSISTENCY = SUCCESS
+</p>
+
+<div class="quote">
+<span class="eng">
+5 things destroying DISCIPLINE:
+</span>
+<br><br>
+1. Motivation
+<br>
+2. Distraction
+<br>
+3. Overthinking
+<br>
+4. No clear direction
+<br>
+5. Your comfort zone
+</div>
+
+<div class="quote">
+<span class="tamil">
+Phonai misuse pannum pothu unnudaiya dream வெற்றியின் சதவீதம் குறையும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+கனவு என்பது தூக்கத்தில் வருவது அல்ல.
+உன் வெற்றியை அடையும் வரை உன் தூங்காமல் இருக்க செய்வது.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+அதிகம் படிப்பது தவறு அல்ல.
+அதிக படிக்க படிக்க
+உன் வருமானம் உயரும்,
+உன் உழைப்பு குறையும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Mistake and practice makes perfect.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+புரிந்து படிக்க வேண்டும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+பிரச்சனை வரும் முன்னே கணித்தால்
+அதை சமாளிப்பது எளிமை.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+JEE MAIN TARGET:
+</span>
+<br><br>
+🔥 Aim 250
+<br>
+⚡ Second Aim 200
+<br>
+🚀 Third Aim 150
+</div>
+
+<div class="quote">
+<span class="tamil">
+முடியுமா? என்று உன்னுள் கேள்வி இருந்தால்,
+முயற்சி செய்யாமல் இருப்பதை விட
+முயற்சி செய்து தோற்பதே மேல்.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+முதலில் ஆரம்பிக்கவும்,
+பிறகு அழகாக மாற்றலாம்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Overthinking vanthal
+123 mindkula count pannu.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+சுத்தமான இடம்,
+மனம்,
+உடம்பு
+இருந்தால் படிப்பு தானாக வரும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+உன்னை எது படிப்பதை தடுக்குது என்பதை கண்டறிந்து மாற்றவும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Consistency is Powerful ☠️
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+இன்று ஒரு நாள் மட்டும் என்று தவறைச் செய்தால்
+அந்த தவறைத் திருத்த முடியாது.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+சரியானதை செய்யா விட்டாலும்
+தவறு செய்யக் கூடாது.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Skills learning better than memorizing lessons.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+★ Small to Big → Best Formula.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+★ Errors solving and doubt solving is important.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+JEE mainku Drop yearum kastamthan.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Fee pathi don't feel.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+படிக்கும் போது படிக்கனும்.
+வேலை செய்யும் போது வேலை செய்யனும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Your biggest ENEMY is your uncontrolled MIND.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+DISCIPLINE Not a problem, try to solve.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+DISCIPLINE + CONSISTENCY = SUCCESS
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Big lesson → part part split panni padikanum.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+திறமையை விட DISCIPLINE BETTER.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+Habits ஆகிட்டா படிப்பும் எளிமை.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+தோல்வி பயத்தில் தயங்கி நிற்பதை விட
+துணிந்து தோற்பதே சிறப்பு.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+நேற்றையை விட இன்று சிறிய அளவிலாவது அதிகம் படிக்கலாம்.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+11th irunthu JEE ku venum enpathu
+Concepts, formulas and some details.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Pasta thing panni feel panna kudathu.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+அடுத்தவர்களை வைத்து நம்மை compare panna kudathu.
+ஏனெனில் அவர்களைவிட திறமை நம்மில் இருக்கலாம்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Others preparation time → 2 years
+<br>
+Nee eduthukura time → 1 year
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+சாதிக்க வேண்டும் என்று படிக்க வேண்டும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+★ சாதிக்க படிக்கனும்
+<br><br>
+✓ DISCIPLINE irukanum
+<br>
+✓ Consistency irukanum
+<br>
+✓ Don't waste time
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+ஒரு செயலை செய்கிறேன் அல்லது செய்யவில்லை எனில்,
+செய்தால் என்ன பயன், தீமை
+செய்யவில்லை என்றால் என்ன பயன், தீமை
+என்று சிந்திக்க வேண்டும்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Overthinking apa breathing pannalam.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Thevai illa dopamine phone use avoid pannu.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+Patikum pothu padikanuma?
+என்ற எண்ணத்தை மாற்று.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Study now.
+Feel proud later.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Consistency beats talent.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+தோல்வி முடிவு அல்ல.
+அது அனுபவம்.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+Every topper was once a beginner.
+</span>
+</div>
+
+<div class="quote">
+<span class="tamil">
+நீ தினமும் கொஞ்சம் முன்னேறினால்
+ஒருநாள் மிகப்பெரிய வெற்றி உன்னதே.
+</span>
+</div>
+
+<div class="quote">
+<span class="eng">
+No shortcut.
+Only hardwork + consistency.
+</span>
+</div>
+
+<div class="footer">
+CREATE BY GOWINDASAMY | PREMIUM GUIDANCE
+</div>
+
+</div>
+
+</body>
+  </html>
