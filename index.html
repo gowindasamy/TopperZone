@@ -30,13 +30,11 @@ align-items:center;
 background:
 linear-gradient(
 135deg,
-
 #000000,
 #120000,
 #001111,
 #000022,
 #000000
-
 );
 
 background-size:
@@ -67,13 +65,9 @@ height:700px;
 background:
 
 radial-gradient(
-
 circle,
-
 rgba(255,80,0,0.35),
-
 transparent 70%
-
 );
 
 filter:blur(120px);
@@ -109,9 +103,7 @@ border:
 box-shadow:
 
 0 0 20px rgba(255,0,0,0.25),
-
 0 0 35px rgba(0,255,255,0.18),
-
 0 0 60px rgba(255,0,255,0.12);
 
 text-align:center;
@@ -141,16 +133,13 @@ sans-serif;
 
 background:
 linear-gradient(
-
 90deg,
-
 #ff0000,
 #ff8800,
 #ffff00,
 #00ffcc,
 #00aaff,
 #ff00ff
-
 );
 
 background-size:
@@ -164,9 +153,7 @@ textFlow 2s linear infinite;
 -webkit-text-fill-color:transparent;
 
 text-shadow:
-
 0 0 15px rgba(255,255,255,0.2),
-
 0 0 35px rgba(255,0,255,0.25);
 
 }
@@ -197,9 +184,7 @@ font-weight:600;
 color:white;
 
 box-shadow:
-
 0 0 12px rgba(0,255,255,0.18),
-
 0 0 25px rgba(255,0,255,0.08);
 
 transition:0.3s;
@@ -211,11 +196,8 @@ transition:0.3s;
 transform:scale(1.03);
 
 box-shadow:
-
 0 0 18px cyan,
-
 0 0 35px magenta,
-
 0 0 50px orange;
 
 }
@@ -244,16 +226,13 @@ sans-serif;
 
 background:
 linear-gradient(
-
 90deg,
-
 #ff0000,
 #ff8800,
 #ffff00,
 #00ffcc,
 #00aaff,
 #ff00ff
-
 );
 
 background-size:
@@ -267,11 +246,8 @@ color:white;
 letter-spacing:3px;
 
 box-shadow:
-
 0 0 20px rgba(255,0,0,0.3),
-
 0 0 40px rgba(0,255,255,0.2),
-
 0 0 60px rgba(255,0,255,0.15);
 
 transition:0.3s;
@@ -285,11 +261,8 @@ translateY(-4px)
 scale(1.03);
 
 box-shadow:
-
 0 0 25px red,
-
 0 0 45px cyan,
-
 0 0 70px magenta;
 
 }
@@ -509,35 +482,32 @@ import { initializeApp }
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
-
 getFirestore,
 doc,
 getDoc,
 updateDoc
-
 }
-
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
 
 apiKey:
-"AIzaSyAV9WmHR_cY01i3UMLpwlbymjjz_sQT_80",
+"YOUR_FIREBASE_API_KEY",
 
 authDomain:
-"tngslogin.firebaseapp.com",
+"YOUR_PROJECT.firebaseapp.com",
 
 projectId:
-"tngslogin",
+"YOUR_PROJECT_ID",
 
 storageBucket:
-"tngslogin.firebasestorage.app",
+"YOUR_PROJECT.appspot.com",
 
 messagingSenderId:
-"552680193680",
+"YOUR_SENDER_ID",
 
 appId:
-"1:552680193680:web:54db58e0e418a2b63aa215"
+"YOUR_APP_ID"
 
 };
 
@@ -623,15 +593,11 @@ count >= limit
 && limit != 999999
 ){
 
-alert(
-"ACCOUNT LOCKED ❌"
-);
+alert("ACCOUNT LOCKED ❌");
 
 return;
 
 }
-
-/* LOGIN DATA */
 
 const now =
 new Date();
@@ -677,8 +643,6 @@ loginData
 ]
 
 });
-
-/* REDIRECT */
 
 if(currentPage == "jee"){
 
@@ -907,4 +871,4 @@ popup
 </script>
 
 </body>
-  </html>
+</html>
