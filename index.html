@@ -5,10 +5,10 @@
 <meta charset="UTF-8">
 
 <title>
-🔥 TOPPER ZONE 🔥
+🔥 TOPPERZONE 🔥
 </title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Teko:wght@400;500;700&family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,18 +20,11 @@ box-sizing:border-box;
 
 body{
 
-background:
-linear-gradient(
-135deg,
-#000000,
-#120000,
-#1a0000,
-#000000
-);
-
 font-family:
-'Poppins',
+'Noto Sans Tamil',
 sans-serif;
+
+background:black;
 
 color:white;
 
@@ -39,47 +32,150 @@ overflow-x:hidden;
 
 }
 
-/* BACKGROUND GLOW */
+/* LOGIN CHECK */
 
-body::before{
-
-content:"";
+.loading{
 
 position:fixed;
 
-top:-200px;
-left:-200px;
+top:0;
+left:0;
 
-width:700px;
-height:700px;
+width:100%;
+height:100%;
+
+background:black;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+font-size:35px;
+
+font-weight:bold;
+
+color:#ff6600;
+
+z-index:9999;
+
+}
+
+/* BACKGROUND */
+
+.bg{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
 
 background:
+
+linear-gradient(
+125deg,
+
+#000000 0%,
+
+#140000 20%,
+
+#2b0000 40%,
+
+#1a0000 60%,
+
+#000000 100%
+
+);
+
+overflow:hidden;
+
+z-index:-3;
+
+}
+
+/* GLOW */
+
+.glow{
+
+position:fixed;
+
+width:900px;
+height:900px;
+
+background:
+
 radial-gradient(
+
 circle,
-rgba(255,80,0,0.25),
+
+rgba(255,80,0,0.35),
+
+rgba(255,0,0,0.08),
+
 transparent 70%
+
 );
 
 filter:blur(120px);
 
-animation:
-moveGlow 8s linear infinite alternate;
+border-radius:50%;
 
-z-index:-1;
+top:-250px;
+left:-250px;
+
+animation:
+moveGlow 14s ease-in-out infinite alternate;
+
+z-index:-2;
+
+opacity:0.9;
 
 }
 
-/* MAIN */
+/* PARTICLES */
+
+.particles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background-image:
+
+radial-gradient(
+rgba(255,120,0,0.8) 1px,
+transparent 1px
+);
+
+background-size:
+40px 40px;
+
+opacity:0.08;
+
+z-index:-1;
+
+animation:
+particleMove 20s linear infinite;
+
+}
+
+/* CONTAINER */
 
 .container{
 
-width:92%;
-
-max-width:1100px;
+width:95%;
+max-width:1200px;
 
 margin:auto;
 
-padding:60px 0;
+padding:40px 20px 100px;
 
 }
 
@@ -87,103 +183,156 @@ padding:60px 0;
 
 .title{
 
-text-align:center;
+font-family:
+'Orbitron',
+sans-serif;
 
-font-size:65px;
+font-size:58px;
 
 font-weight:900;
 
-margin-bottom:20px;
+text-align:center;
+
+line-height:1.3;
 
 background:
 linear-gradient(
+
 90deg,
-#ff3300,
-#ff8800,
-#ffaa00
+
+#ff0000,
+#ff6600,
+#ffaa00,
+#ff3300
+
 );
 
 -webkit-background-clip:text;
-
 -webkit-text-fill-color:transparent;
 
 text-shadow:
-0 0 30px rgba(255,80,0,0.4);
+0 0 25px #ff3300,
+0 0 45px #ff6600;
+
+margin-top:30px;
+margin-bottom:25px;
+
+letter-spacing:2px;
+
+word-break:break-word;
+
+overflow-wrap:break-word;
 
 }
 
 /* SUBTITLE */
 
-.sub{
+.subtitle{
 
 text-align:center;
 
-font-size:22px;
+font-size:25px;
 
-margin-bottom:60px;
+font-weight:600;
 
-color:#ffbb88;
+color:#ff6600;
 
-font-weight:700;
+margin-bottom:70px;
+
+text-shadow:
+0 0 10px #ff3300;
 
 }
 
-/* QUOTE BOX */
+/* SECTION */
+
+.section{
+
+padding:35px 10px;
+
+margin-bottom:45px;
+
+border-bottom:
+1px solid rgba(255,120,0,0.25);
+
+}
+
+/* HEADING */
+
+.section h2{
+
+font-family:
+'Orbitron',
+sans-serif;
+
+font-size:40px;
+
+margin-bottom:25px;
+
+color:#ff6600;
+
+text-shadow:
+0 0 10px #ff3300;
+
+letter-spacing:2px;
+
+}
+
+/* LIST */
+
+.points{
+
+padding-left:20px;
+
+}
+
+.points li{
+
+font-family:
+'Teko',
+'Noto Sans Tamil',
+sans-serif;
+
+font-size:30px;
+
+line-height:1.9;
+
+margin-bottom:18px;
+
+font-weight:500;
+
+color:#f5f5f5;
+
+letter-spacing:1px;
+
+text-shadow:
+0 0 3px rgba(255,255,255,0.15);
+
+}
+
+/* QUOTE */
 
 .quote{
 
-background:
-rgba(255,255,255,0.04);
+font-family:
+'Teko',
+'Noto Sans Tamil',
+sans-serif;
 
-border:
-1px solid rgba(255,120,0,0.15);
-
-padding:24px;
-
-border-radius:24px;
-
-margin-bottom:24px;
-
-font-size:22px;
-
-font-weight:600;
-
-line-height:1.8;
-
-box-shadow:
-0 0 20px rgba(255,80,0,0.08);
-
-transition:0.3s;
-
-}
-
-.quote:hover{
-
-transform:
-translateY(-6px);
-
-box-shadow:
-0 0 35px rgba(255,120,0,0.22);
-
-}
-
-/* ENGLISH */
-
-.eng{
-
-color:#ffaa66;
+font-size:42px;
 
 font-weight:700;
 
-}
+line-height:1.8;
 
-/* TAMIL */
+text-align:center;
 
-.tamil{
+color:#ffb366;
 
-color:#ffffff;
+letter-spacing:1px;
 
-font-weight:600;
+text-shadow:
+0 0 18px #ff3300;
 
 }
 
@@ -193,23 +342,35 @@ font-weight:600;
 
 text-align:center;
 
+font-size:30px;
+
 margin-top:70px;
 
-font-size:20px;
+color:#ff6600;
 
 font-weight:700;
 
-background:
-linear-gradient(
-90deg,
-#ff3300,
-#ff8800,
-#ffaa00
-);
+text-shadow:
+0 0 15px #ff3300;
 
--webkit-background-clip:text;
+}
 
--webkit-text-fill-color:transparent;
+.credit{
+
+font-family:
+'Orbitron',
+sans-serif;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+color:#ff944d;
+
+text-shadow:
+0 0 12px #ff3300;
+
+opacity:0.9;
 
 }
 
@@ -219,12 +380,26 @@ linear-gradient(
 
 0%{
 transform:
-translate(-50px,-50px);
+translate(0,0);
 }
 
 100%{
 transform:
-translate(100px,100px);
+translate(400px,300px);
+}
+
+}
+
+@keyframes particleMove{
+
+0%{
+transform:
+translateY(0);
+}
+
+100%{
+transform:
+translateY(-200px);
 }
 
 }
@@ -235,389 +410,412 @@ translate(100px,100px);
 
 <body>
 
+<div class="loading">
+🔐 Checking Access...
+</div>
+
 <script>
 
-/* ACCESS CHECK */
+/* LOGIN PROTECTION */
 
 const params =
+
 new URLSearchParams(
 window.location.search
 );
 
-const access =
-params.get("access");
+if(
+params.get("access")
+!= "true"
+){
 
-if(access != "true"){
+window.location.href =
 
-document.body.innerHTML =
+"https://gowindasamy.github.io/login/login.html?page=topperzone";
 
-`
-<div style="
+}
 
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:black;
-color:white;
-font-size:40px;
-font-family:Poppins,sans-serif;
-text-align:center;
-padding:20px;
+/* REMOVE LOADING */
 
-">
+window.onload = function(){
 
-❌ ACCESS DENIED
-
-</div>
-`;
-
-throw new Error(
-"ACCESS DENIED"
-);
+document.querySelector(
+".loading"
+).style.display = "none";
 
 }
 
 </script>
 
+<div class="bg"></div>
+
+<div class="glow"></div>
+
+<div class="particles"></div>
+
 <div class="container">
 
 <h1 class="title">
-🔥 TOPPER ZONE 🔥
+
+🔥 TOPPERZONE 🔥
+
+<br>
+
+DISCIPLINE + CONSISTENCY
+
 </h1>
 
-<p class="sub">
-DISCIPLINE + CONSISTENCY = SUCCESS
+<p class="subtitle">
+
+JEE • 12TH • SUCCESS • MINDSET 🚀
+
 </p>
 
-<div class="quote">
-<span class="eng">
-5 things destroying DISCIPLINE:
-</span>
-<br><br>
-1. Motivation
-<br>
-2. Distraction
-<br>
-3. Overthinking
-<br>
-4. No clear direction
-<br>
-5. Your comfort zone
+<div class="section">
+
+<h2>
+☠️ 5 THINGS DESTROYING DISCIPLINE
+</h2>
+
+<ul class="points">
+
+<li>1. Motivation</li>
+<li>2. Distraction</li>
+<li>3. Overthinking</li>
+<li>4. No Clear Direction</li>
+<li>5. Your Comfort Zone</li>
+
+</ul>
+
 </div>
 
-<div class="quote">
-<span class="tamil">
+<div class="section">
+
+<h2>
+🔥 POWERFUL THOUGHTS
+</h2>
+
+<ul class="points">
+
+<li>
 Phonai misuse pannum pothu unnudaiya dream வெற்றியின் சதவீதம் குறையும்.
-</span>
-</div>
+</li>
 
-<div class="quote">
-<span class="tamil">
+<li>
 கனவு என்பது தூக்கத்தில் வருவது அல்ல.
-உன் வெற்றியை அடையும் வரை உன் தூங்காமல் இருக்க செய்வது.
-</span>
-</div>
+உன் வெற்றியை அடையும் வரை உன்னை தூங்காமல் இருக்க செய்வது.
+</li>
 
-<div class="quote">
-<span class="tamil">
+<li>
 அதிகம் படிப்பது தவறு அல்ல.
-அதிக படிக்க படிக்க
-உன் வருமானம் உயரும்,
+அதிகம் படிக்க படிக்க
+உன் வருமானம் உயரும்.
 உன் உழைப்பு குறையும்.
-</span>
-</div>
+</li>
 
-<div class="quote">
-<span class="eng">
-Mistake and practice makes perfect.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
+<li>
 புரிந்து படிக்க வேண்டும்.
-</span>
-</div>
+</li>
 
-<div class="quote">
-<span class="tamil">
+<li>
+Mistake and practice makes perfect.
+</li>
+
+<li>
 பிரச்சனை வரும் முன்னே கணித்தால்
 அதை சமாளிப்பது எளிமை.
-</span>
+</li>
+
+<li>
+CONSISTENCY IS POWERFUL ☠️
+</li>
+
+</ul>
+
 </div>
 
-<div class="quote">
-<span class="eng">
-JEE MAIN TARGET:
-</span>
-<br><br>
-🔥 Aim 250
-<br>
-⚡ Second Aim 200
-<br>
-🚀 Third Aim 150
+<div class="section">
+
+<h2>
+📚 STUDY RULES
+</h2>
+
+<ul class="points">
+
+<li>
+★ Small to big (best formula all)
+</li>
+
+<li>
+★ Errors solving and doubt solving is important
+</li>
+
+<li>
+Skills learning better than memorying lessons
+</li>
+
+<li>
+Big lesson → part part split panni padikanum
+</li>
+
+<li>
+11th irunthu JEE-ku concepts,
+formulas and details strong ஆக இருக்க வேண்டும்.
+</li>
+
+<li>
+Habits ஆகிட்டா படிப்பும் எளிமை.
+</li>
+
+<li>
+திறமையை விட DISCIPLINE better.
+</li>
+
+<li>
+நேற்றையை விட இன்று சிறிய அளவிலாவது அதிகம் படிக்கலாம்.
+</li>
+
+<li>
+சாதிக்க வேண்டும் என்று படிக்க வேண்டும்.
+</li>
+
+<li>
+JEE mainku drop yearum kastamthan.
+</li>
+
+<li>
+Fee pathi don't feel.
+</li>
+
+</ul>
+
 </div>
 
-<div class="quote">
-<span class="tamil">
+<div class="section">
+
+<h2>
+🧠 MIND CONTROL
+</h2>
+
+<ul class="points">
+
+<li>
+Overthinking vanthal
+1 2 3 mindkula count pannu.
+</li>
+
+<li>
+Overthinking apa breathing pannalam.
+</li>
+
+<li>
+Your biggest ENEMY is your uncontrolled MIND.
+</li>
+
+<li>
+Past thing panni feel panna kudathu.
+</li>
+
+<li>
+காரணத்திற்காக காரணம் சொல்லாதே!
+</li>
+
+<li>
+Patikum pothu padikanuma?
+என்ற எண்ணத்தை மாற்று.
+</li>
+
+<li>
+உன்னை எது படிப்பதை தடுக்குது என்பதை கண்டறிந்து மாற்றவும்.
+</li>
+
+<li>
+காரணம் சொல்வதை நிறுத்துவது சிறந்தது.
+</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>
+⚔️ DISCIPLINE RULES
+</h2>
+
+<ul class="points">
+
+<li>
+DISCIPLINE + CONSISTENCY = SUCCESS
+</li>
+
+<li>
+DISCIPLINE not a problem, try to solve.
+</li>
+
+<li>
+சுத்தமான இடம்,
+மனம்,
+உடம்பு இருந்தால்
+படிப்பு தானாக வரும்.
+</li>
+
+<li>
+சரியானதை செய்யா விட்டாலும்
+தவறு செய்யக் கூடாது.
+</li>
+
+<li>
+இன்று ஒரு நாள் மட்டும் என்று தவறை செய்தால்
+அந்த தவறை திருத்த முடியாது.
+</li>
+
+<li>
+Thevai illa dopamine phone use avoid pannunga.
+</li>
+
+<li>
+படிக்கும் போது படிக்கனும்.
+வேலை செய்யும் போது வேலை செய்யனும்.
+</li>
+
+<li>
+தோல்வி பயத்தில் தயங்கி நிற்பதை விட
+துணிந்து தோற்பதே சிறப்பு.
+</li>
+
+<li>
 முடியுமா? என்று உன்னுள் கேள்வி இருந்தால்,
 முயற்சி செய்யாமல் இருப்பதை விட
 முயற்சி செய்து தோற்பதே மேல்.
-</span>
-</div>
+</li>
 
-<div class="quote">
-<span class="tamil">
-முதலில் ஆரம்பிக்கவும்,
+<li>
+முதலில் ஆரம்பிக்கவும்.
 பிறகு அழகாக மாற்றலாம்.
-</span>
+</li>
+
+</ul>
+
 </div>
 
-<div class="quote">
-<span class="eng">
-Overthinking vanthal
-123 mindkula count pannu.
-</span>
-</div>
+<div class="section">
 
-<div class="quote">
-<span class="tamil">
-சுத்தமான இடம்,
-மனம்,
-உடம்பு
-இருந்தால் படிப்பு தானாக வரும்.
-</span>
-</div>
+<h2>
+💡 SUCCESS MINDSET
+</h2>
 
-<div class="quote">
-<span class="tamil">
-உன்னை எது படிப்பதை தடுக்குது என்பதை கண்டறிந்து மாற்றவும்.
-</span>
-</div>
+<ul class="points">
 
-<div class="quote">
-<span class="eng">
-Consistency is Powerful ☠️
-</span>
-</div>
+<li>
+அடுத்தவர்களை வைத்து
+நம்மை compare panna kudathu.
+</li>
 
-<div class="quote">
-<span class="tamil">
-இன்று ஒரு நாள் மட்டும் என்று தவறைச் செய்தால்
-அந்த தவறைத் திருத்த முடியாது.
-</span>
-</div>
+<li>
+அவர்களைவிட திறமை நம்மில் இருக்கலாம்.
+</li>
 
-<div class="quote">
-<span class="tamil">
-சரியானதை செய்யா விட்டாலும்
-தவறு செய்யக் கூடாது.
-</span>
-</div>
+<li>
+Others Preparation Time → 2 Years
+</li>
 
-<div class="quote">
-<span class="eng">
-Skills learning better than memorizing lessons.
-</span>
-</div>
+<li>
+Nee Eduthukura Time → 1 Year
+</li>
 
-<div class="quote">
-<span class="eng">
-★ Small to Big → Best Formula.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-★ Errors solving and doubt solving is important.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-JEE mainku Drop yearum kastamthan.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-Fee pathi don't feel.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-படிக்கும் போது படிக்கனும்.
-வேலை செய்யும் போது வேலை செய்யனும்.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-Your biggest ENEMY is your uncontrolled MIND.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-DISCIPLINE Not a problem, try to solve.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-DISCIPLINE + CONSISTENCY = SUCCESS
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-Big lesson → part part split panni padikanum.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-திறமையை விட DISCIPLINE BETTER.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-Habits ஆகிட்டா படிப்பும் எளிமை.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-தோல்வி பயத்தில் தயங்கி நிற்பதை விட
-துணிந்து தோற்பதே சிறப்பு.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-நேற்றையை விட இன்று சிறிய அளவிலாவது அதிகம் படிக்கலாம்.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-11th irunthu JEE ku venum enpathu
-Concepts, formulas and some details.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-Pasta thing panni feel panna kudathu.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-அடுத்தவர்களை வைத்து நம்மை compare panna kudathu.
-ஏனெனில் அவர்களைவிட திறமை நம்மில் இருக்கலாம்.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-Others preparation time → 2 years
-<br>
-Nee eduthukura time → 1 year
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-சாதிக்க வேண்டும் என்று படிக்க வேண்டும்.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
+<li>
 ★ சாதிக்க படிக்கனும்
-<br><br>
+</li>
+
+<li>
 ✓ DISCIPLINE irukanum
-<br>
+</li>
+
+<li>
 ✓ Consistency irukanum
-<br>
+</li>
+
+<li>
 ✓ Don't waste time
-</span>
-</div>
+</li>
 
-<div class="quote">
-<span class="tamil">
+<li>
 ஒரு செயலை செய்கிறேன் அல்லது செய்யவில்லை எனில்,
-செய்தால் என்ன பயன், தீமை
-செய்யவில்லை என்றால் என்ன பயன், தீமை
-என்று சிந்திக்க வேண்டும்.
-</span>
+செய்தால் என்ன பயன்,
+தீமை என்று சிந்திக்க வேண்டும்.
+</li>
+
+<li>
+செய்யவில்லை என்றால் என்ன பயன்,
+தீமை என்றும் யோசிக்க வேண்டும்.
+</li>
+
+<li>
+Phone dopamine addiction future destroy pannum.
+</li>
+
+<li>
+Distraction sacrifice pannina dream life create panna mudiyum.
+</li>
+
+<li>
+Daily revision confidence increase pannum.
+</li>
+
+<li>
+Thinking less and doing more creates toppers.
+</li>
+
+<li>
+Comfort zone kills big dreams.
+</li>
+
+<li>
+Successக்கு shortcut இல்லை.
+</li>
+
+<li>
+Focus today → Freedom tomorrow.
+</li>
+
+<li>
+Time waste செய்வது life waste செய்வது போல.
+</li>
+
+</ul>
+
 </div>
 
-<div class="quote">
-<span class="eng">
-Overthinking apa breathing pannalam.
-</span>
-</div>
+<div class="section">
 
-<div class="quote">
-<span class="eng">
-Thevai illa dopamine phone use avoid pannu.
-</span>
-</div>
+<p class="quote">
 
-<div class="quote">
-<span class="tamil">
-Patikum pothu padikanuma?
-என்ற எண்ணத்தை மாற்று.
-</span>
-</div>
+🔥 BUILD YOUR FUTURE 🔥
 
-<div class="quote">
-<span class="eng">
-Study now.
-Feel proud later.
-</span>
-</div>
+<br><br>
 
-<div class="quote">
-<span class="eng">
-Consistency beats talent.
-</span>
-</div>
+CONSISTENCY IS POWERFUL ☠️
 
-<div class="quote">
-<span class="tamil">
-தோல்வி முடிவு அல்ல.
-அது அனுபவம்.
-</span>
-</div>
+</p>
 
-<div class="quote">
-<span class="eng">
-Every topper was once a beginner.
-</span>
-</div>
-
-<div class="quote">
-<span class="tamil">
-நீ தினமும் கொஞ்சம் முன்னேறினால்
-ஒருநாள் மிகப்பெரிய வெற்றி உன்னதே.
-</span>
-</div>
-
-<div class="quote">
-<span class="eng">
-No shortcut.
-Only hardwork + consistency.
-</span>
 </div>
 
 <div class="footer">
-CREATE BY GOWINDASAMY | PREMIUM GUIDANCE
+
+TOPPERZONE 🚀
+
+<br><br>
+
+<span class="credit">
+
+CREATE BY GOWINDASAMY
+|
+
+PREMIUM GUIDANCE
+
+</span>
+
 </div>
 
 </div>
